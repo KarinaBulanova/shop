@@ -25,7 +25,6 @@ class ShopRepositoryTest {
     }
 
 
-
     @Test
     public void attemptToRemoveNonExistentProduct() {
         ShopRepository repo = new ShopRepository();
@@ -36,7 +35,7 @@ class ShopRepositoryTest {
         repo.add(product1);
         repo.add(product2);
         repo.add(product3);
-       Assertions.assertThrows(NotFoundException.class,
-               () -> repo.remove(54));
+        Assertions.assertThrows(NotFoundException.class,
+                () -> repo.remove(54));
     }
 }
